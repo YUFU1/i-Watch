@@ -1,9 +1,10 @@
 # Watch
 
-
+					watch原理图
 ![image](https://github.com/210843013/Watch/blob/master/watch.png)
 
-						注意事项：
+
+##配置TIMx输出PWM注意事项：
 				
 
 ![image](https://github.com/210843013/Watch/blob/master/afr.png)
