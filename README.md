@@ -2,10 +2,7 @@
 
 
 
-			1、输出PWM波
-
-			
-				注意事项：
+						注意事项：
 				
 
 ![image](https://github.com/210843013/Watch/blob/master/afr.png)
@@ -14,7 +11,8 @@
 			GPIOB->AFR[1] &=~((unsigned int)0xf<<8); //清零
 			GPIOB->AFR[1] |= ((unsigned int)0x1<<8);   //复用成TIM2
 			
-			定时器2的通道3
+			
+##定时器2的通道3
 			
 ![image](https://github.com/210843013/Watch/blob/master/ch.png)
 			
