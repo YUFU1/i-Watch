@@ -9,9 +9,7 @@
 ".\objects\key.o"
 ".\objects\tim3_ch2_pwm.o"
 ".\objects\tim2_ch3_pwm .o"
---library_type=microlib
---feedback ".\Objects\watch.fed" --feedback_image=none
---strict --scatter ".\Objects\watch.sct"
+--library_type=microlib --strict --scatter ".\Objects\watch.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\Listings\watch.map" -o .\Objects\watch.axf
