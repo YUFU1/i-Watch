@@ -1,0 +1,21 @@
+Dependencies for Project 'watch', Target 'Target 1': (DO NOT MODIFY !)
+F (..\CMSIS\system_stm32f4xx.c)(0x53DBBB10)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\User\inc -I ..\User\src-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F411xE -DSTM32F411xE-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
+I (..\CMSIS\stm32f4xx.h)(0x53DBA48A)
+I (..\CMSIS\core_cm4.h)(0x53C7D532)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\CMSIS\core_cmInstr.h)(0x53C7D532)
+I (..\CMSIS\core_cmFunc.h)(0x53C7D532)
+I (..\CMSIS\core_cm4_simd.h)(0x53C7D532)
+I (..\CMSIS\system_stm32f4xx.h)(0x53DBA49A)
+F (..\CMSIS\startup_stm32f40_41xxx.s)(0x53DBBC54)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 523" --pd "STM32F411xE SETA 1"--list .\listings\startup_stm32f40_41xxx.lst --xref -o .\objects\startup_stm32f40_41xxx.o --depend .\objects\startup_stm32f40_41xxx.d)
+F (..\CMSIS\stm32f4xx.h)(0x53DBA48A)()
+F (..\CMSIS\system_stm32f4xx.h)(0x53DBA49A)()
+F (..\User\src\main.c)(0x59A7739C)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\User\inc -I ..\User\src-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F411xE -DSTM32F411xE-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\User\inc\includes.h)(0x59A77358)
+I (..\CMSIS\stm32f4xx.h)(0x53DBA48A)
+I (..\CMSIS\core_cm4.h)(0x53C7D532)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\CMSIS\core_cmInstr.h)(0x53C7D532)
+I (..\CMSIS\core_cmFunc.h)(0x53C7D532)
+I (..\CMSIS\core_cm4_simd.h)(0x53C7D532)
+I (..\CMSIS\system_stm32f4xx.h)(0x53DBA49A)
