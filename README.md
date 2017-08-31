@@ -1,6 +1,7 @@
 # Watch
 
 
+![image](https://github.com/210843013/Watch/blob/master/watch.png)
 
 						注意事项：
 				
