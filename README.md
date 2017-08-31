@@ -8,7 +8,7 @@
 				注意事项：
 				
 
-![image](https://github.com/210843013/485/blob/master/afr.png)
+![image](https://github.com/210843013/Watch/blob/master/afr.png)
 			
 			复用功能选择
 			GPIOB->AFR[1] &=~((unsigned int)0xf<<8); //清零
@@ -16,20 +16,20 @@
 			
 			定时器2的通道3
 			
-![image](https://github.com/210843013/485/blob/master/ch.png)
+![image](https://github.com/210843013/Watch/blob/master/ch.png)
 			
 			
 				CCMRx的选择
 			
-![image](https://github.com/210843013/485/blob/master/ccmrx.png)
+![image](https://github.com/210843013/Watch/blob/master/ccmrx.png)
    
 				当选择TIMx_ch1 TIMX_ch2时候，选择比较方式1和2即CCMR1
 				
-![image](https://github.com/210843013/485/blob/master/ccmr1.png)
+![image](https://github.com/210843013/Watch/blob/master/ccmr1.png)
 
 				当选择TIMx_ch3 TIMX_ch4时候，选择比较方式3和4即CCMR2
 				
-![image](https://github.com/210843013/485/blob/master/ccmr2.png)
+![image](https://github.com/210843013/Watch/blob/master/ccmr2.png)
 			
 			
 			//把通道配置为输出
