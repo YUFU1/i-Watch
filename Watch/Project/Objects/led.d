@@ -15,3 +15,6 @@
 .\objects\led.o: ..\User\inc\key.h
 .\objects\led.o: ..\User\inc\tim3_ch2_pwm.h
 .\objects\led.o: ..\User\inc\tim2_ch3_pwm.h
+.\objects\led.o: ..\User\inc\spi.h
+.\objects\led.o: ..\User\inc\oled.h
+.\objects\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -51,7 +51,7 @@
           <OutputName>watch</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
+          <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -324,8 +324,8 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
-            <v6Lang>1</v6Lang>
-            <v6LangP>1</v6LangP>
+            <v6Lang>3</v6Lang>
+            <v6LangP>3</v6LangP>
             <vShortEn>1</vShortEn>
             <vShortWch>1</vShortWch>
             <v6Lto>0</v6Lto>
@@ -405,6 +405,11 @@
           <GroupName>User</GroupName>
           <Files>
             <File>
+              <FileName>README.txt</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\README.txt</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\src\main.c</FilePath>
@@ -443,6 +448,16 @@
               <FileName>tim2_ch3_pwm .c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\src\tim2_ch3_pwm .c</FilePath>
+            </File>
+            <File>
+              <FileName>spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\src\spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>oled.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\src\oled.c</FilePath>
             </File>
           </Files>
         </Group>

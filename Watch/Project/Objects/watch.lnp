@@ -9,6 +9,8 @@
 ".\objects\key.o"
 ".\objects\tim3_ch2_pwm.o"
 ".\objects\tim2_ch3_pwm .o"
+".\objects\spi.o"
+".\objects\oled.o"
 --library_type=microlib
 --feedback ".\Objects\watch.fed" --feedback_image=none
 --strict --scatter ".\Objects\watch.sct"

@@ -15,3 +15,6 @@
 .\objects\tim2_ch3_pwm .o: ..\User\inc\key.h
 .\objects\tim2_ch3_pwm .o: ..\User\inc\tim3_ch2_pwm.h
 .\objects\tim2_ch3_pwm .o: ..\User\inc\tim2_ch3_pwm.h
+.\objects\tim2_ch3_pwm .o: ..\User\inc\spi.h
+.\objects\tim2_ch3_pwm .o: ..\User\inc\oled.h
+.\objects\tim2_ch3_pwm .o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

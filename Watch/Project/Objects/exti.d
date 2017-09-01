@@ -15,3 +15,6 @@
 .\objects\exti.o: ..\User\inc\key.h
 .\objects\exti.o: ..\User\inc\tim3_ch2_pwm.h
 .\objects\exti.o: ..\User\inc\tim2_ch3_pwm.h
+.\objects\exti.o: ..\User\inc\spi.h
+.\objects\exti.o: ..\User\inc\oled.h
+.\objects\exti.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

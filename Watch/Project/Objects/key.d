@@ -15,3 +15,6 @@
 .\objects\key.o: ..\User\inc\key.h
 .\objects\key.o: ..\User\inc\tim3_ch2_pwm.h
 .\objects\key.o: ..\User\inc\tim2_ch3_pwm.h
+.\objects\key.o: ..\User\inc\spi.h
+.\objects\key.o: ..\User\inc\oled.h
+.\objects\key.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

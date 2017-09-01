@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\watch.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\watch.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu Aug 31 19:46:28 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Fri Sep 01 20:57:38 2017
 <BR><P>
-<H3>Maximum Stack Usage =          8 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         88 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-SystemInit
+main &rArr; OLED_showChString &rArr; OLED_showChar &rArr; OLED_setPos &rArr; OLED_writeByte
 <P>
 <H3>
 Mutually Recursive functions
@@ -129,7 +129,7 @@ Global Symbols
 <P><STRONG><a name="[5e]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(.text)
 </UL>
-<P><STRONG><a name="[69]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[74]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[5f]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -139,15 +139,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[6a]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[75]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[6b]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[76]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[6c]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[77]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[6d]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[78]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[6e]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[79]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f40_41xxx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
@@ -465,71 +465,167 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f40_41xxx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
 </UL>
+<P><STRONG><a name="[6e]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showHzString
+</UL>
+
 <P><STRONG><a name="[60]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[6f]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[7a]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[68]"></a>Delay_ms</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, systick.o(i.Delay_ms))
+<P><STRONG><a name="[7b]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[7c]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[69]"></a>Delay_ms</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, systick.o(i.Delay_ms))
+<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_reset
+</UL>
+
+<P><STRONG><a name="[73]"></a>LED_Init</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, led.o(i.LED_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[65]"></a>Key_Init</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, key.o(i.Key_Init))
+<P><STRONG><a name="[62]"></a>OLED_Init</STRONG> (Thumb, 260 bytes, Stack size 8 bytes, oled.o(i.OLED_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = OLED_Init &rArr; OLED_setPos &rArr; OLED_writeByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_writeByte
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_setPos
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_reset
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_pinInit
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_deSelect
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_clear
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[67]"></a>OLED_clear</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, oled.o(i.OLED_clear))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OLED_clear &rArr; OLED_writeByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_writeByte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+</UL>
+
+<P><STRONG><a name="[64]"></a>OLED_deSelect</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, oled.o(i.OLED_deSelect))
+<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_writeByte
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+</UL>
+
+<P><STRONG><a name="[63]"></a>OLED_pinInit</STRONG> (Thumb, 180 bytes, Stack size 0 bytes, oled.o(i.OLED_pinInit))
+<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+</UL>
+
+<P><STRONG><a name="[65]"></a>OLED_reset</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, oled.o(i.OLED_reset))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OLED_reset
+</UL>
+<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
+</UL>
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+</UL>
+
+<P><STRONG><a name="[6f]"></a>OLED_select</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, oled.o(i.OLED_select))
+<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_writeByte
+</UL>
+
+<P><STRONG><a name="[68]"></a>OLED_setPos</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, oled.o(i.OLED_setPos))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OLED_setPos &rArr; OLED_writeByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_writeByte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showChar
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showCHinese
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+</UL>
+
+<P><STRONG><a name="[6a]"></a>OLED_showCHinese</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, oled.o(i.OLED_showCHinese))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = OLED_showCHinese &rArr; OLED_setPos &rArr; OLED_writeByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_writeByte
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_setPos
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showHzString
+</UL>
+
+<P><STRONG><a name="[6b]"></a>OLED_showChString</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, oled.o(i.OLED_showChString))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = OLED_showChString &rArr; OLED_showChar &rArr; OLED_setPos &rArr; OLED_writeByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showChar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[6c]"></a>OLED_showChar</STRONG> (Thumb, 282 bytes, Stack size 32 bytes, oled.o(i.OLED_showChar))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = OLED_showChar &rArr; OLED_setPos &rArr; OLED_writeByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_writeByte
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_setPos
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showChString
+</UL>
+
+<P><STRONG><a name="[6d]"></a>OLED_showHzString</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, oled.o(i.OLED_showHzString))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = OLED_showHzString &rArr; OLED_showCHinese &rArr; OLED_setPos &rArr; OLED_writeByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showCHinese
+</UL>
+<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[66]"></a>OLED_writeByte</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, oled.o(i.OLED_writeByte))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OLED_writeByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_select
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_deSelect
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ReceiveByte
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showChar
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showCHinese
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_setPos
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_clear
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+</UL>
+
+<P><STRONG><a name="[72]"></a>SPI_Init</STRONG> (Thumb, 190 bytes, Stack size 0 bytes, spi.o(i.SPI_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[63]"></a>LED_Init</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, led.o(i.LED_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[64]"></a>Motor_Init</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, motor.o(i.Motor_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[70]"></a>SPI_ReceiveByte</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, spi.o(i.SPI_ReceiveByte))
+<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_writeByte
 </UL>
 
 <P><STRONG><a name="[5d]"></a>SystemInit</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, system_stm32f4xx.o(i.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SystemInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(.text)
 </UL>
-<P><STRONG><a name="[67]"></a>TIM2_CH3_PWM_Init</STRONG> (Thumb, 192 bytes, Stack size 8 bytes, tim2_ch3_pwm .o(i.TIM2_CH3_PWM_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM2_CH3_PWM_Init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
+<P><STRONG><a name="[7d]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[66]"></a>TIM3_CH2_PWM_Init</STRONG> (Thumb, 218 bytes, Stack size 8 bytes, tim3_ch2_pwm.o(i.TIM3_CH2_PWM_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM3_CH2_PWM_Init
+<P><STRONG><a name="[7e]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[7f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = main &rArr; OLED_showChString &rArr; OLED_showChar &rArr; OLED_setPos &rArr; OLED_writeByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[70]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
-
-<P><STRONG><a name="[71]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
-
-<P><STRONG><a name="[72]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
-
-<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 100 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = main &rArr; TIM3_CH2_PWM_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_CH2_PWM_Init
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_CH3_PWM_Init
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Motor_Init
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Init
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Init
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showHzString
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_showChString
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL><P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[62]"></a>SetSysClock</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, system_stm32f4xx.o(i.SetSysClock))
+<P><STRONG><a name="[71]"></a>SetSysClock</STRONG> (Thumb, 138 bytes, Stack size 0 bytes, system_stm32f4xx.o(i.SetSysClock))
 <BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 <P>

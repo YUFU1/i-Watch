@@ -15,3 +15,6 @@
 .\objects\motor.o: ..\User\inc\key.h
 .\objects\motor.o: ..\User\inc\tim3_ch2_pwm.h
 .\objects\motor.o: ..\User\inc\tim2_ch3_pwm.h
+.\objects\motor.o: ..\User\inc\spi.h
+.\objects\motor.o: ..\User\inc\oled.h
+.\objects\motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
