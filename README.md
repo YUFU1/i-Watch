@@ -58,7 +58,6 @@
 ![image](https://github.com/210843013/Watch/blob/master/three.png)
 
 			汉字串显示函数，调用单个字符串显示函数没毛病，匹配对应索引列表的汉字
-			
 			返回对应汉字字符所在的行，即汉字在自定义字库中的位置，调用WriteByte打印函数。
 
 ![image](https://github.com/210843013/Watch/blob/master/hz.png)
@@ -67,6 +66,7 @@
 			
 ![image](https://github.com/210843013/Watch/blob/master/pic.JPG) 
 
+
 ##汉字显示bug修复
 
 			原汉字字符串显示函数与修改bug后的字符串显示函数
@@ -74,17 +74,15 @@
 ![image](https://github.com/210843013/Watch/blob/master/bug.png)
 			
 			一个汉字占用数组的两个位，例如汉字 '将' 存放到数组str中，会占用两个数组元素的位置，
-			
 			假如是str[0]和str[1].
 			
-			汉字显示bug修复， 将汉字匹配的条件改为
+	        汉字显示bug修复， 将汉字匹配的条件改为
 			
-				if((*buf==hz_index[i]) && (*(buf+1) ==hz_index[i+1]))	
+			  if((*buf==hz_index[i]) && (*(buf+1) ==hz_index[i+1]))	
 
 ![image](https://github.com/210843013/Watch/blob/master/diff.png)
 
 			在上图中， for(i=0;i<strlen(hz_index);i+=2)，这里+2原因也是一个汉字占用数组的两个位。
-			
 			直接将汉字移动到下一个汉字的位置即可。
 			
 			   OLED_writeByte(Hzk[i][t],OLED_DATA)   和 OLED_writeByte(Hzk[2*no][t],OLED_DATA)的区别
@@ -95,7 +93,7 @@
 			   OLED_writeByte(Hzk[i][t],OLED_DATA) 
 			   OLED_writeByte(Hzk[i+1][t],OLED_DATA)
 
-			   ![image](https://github.com/210843013/Watch/blob/master/font.png)			   
+![image](https://github.com/210843013/Watch/blob/master/font.png)			   
 
 			 该程序直接一个显示汉字的前半部分，一个显示汉字的后半部分. for(i=0;i<strlen(hz_index);i+=2)
 			 中i+=2，直接越过前一个汉字的后半部分，跳到下一个汉字的前半部分的首行。然后调用写字节函数。
