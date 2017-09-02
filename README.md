@@ -61,7 +61,7 @@
 			
 			返回对应汉字字符所在的行，即汉字在自定义字库中的位置，调用WriteByte打印函数。
 
-			![image](https://github.com/210843013/Watch/blob/master/hz.png)
+![image](https://github.com/210843013/Watch/blob/master/hz.png)
 			
 			如结果图所示，显示6个汉字，多次试验汉字成倍显示，bug待修复。
 			
