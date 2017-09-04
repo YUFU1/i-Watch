@@ -174,7 +174,8 @@
 						 //无应答
 						 return  ;
 					}
-![image](https://github.com/210843013/Watch/blob/master/set.png)					
+![image](https://github.com/210843013/Watch/blob/master/set.png)
+					
 					MCU_IIC_Senddata(0x83);  //设置分辨率  
 					//MCU等待接收应答信号
 					if(MCU_IIC_Receiveack())
@@ -209,7 +210,7 @@
 				MCU_IIC_Senddata(SHT20_READADDR|0x01);
 			}while(MCU_IIC_Receiveack());  //无应答则整形，还在测量中，如果有应答，则结束当前循环
 
-			
+![image](https://github.com/210843013/Watch/blob/master/sx.png)	
 			
 			MSB = MCU_IIC_Receivedata();    //读Data(MSB)
 			MCU_IIC_Sendack(0);      //给应答ACK
