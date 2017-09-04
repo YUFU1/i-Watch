@@ -119,7 +119,106 @@
 			
 			OK，正常显示。
 			
+![image](https://github.com/210843013/Watch/blob/master/soft.png)
+
+				#软件复位编程,如上图所示
+					步骤：
+						1、IIC_Start()
+						2、I2C address + write ，发送写地址命令
+						3、等待ACK应答
+						4、发送复位指令0xfe
+						5、等待ACK应答
+						6、IIC_Stop()
+						
+						
+		  void SHT20_softReset(void)                    
+			{
+				IIC_Start();                      //start I2C
+				MCU_IIC_Senddata(SHT20_WRITEADDR);  //I2C address + write
+				//MCU等待接收应答信号
+				if(MCU_IIC_Receiveack())
+				{
+					 //无应答
+					 return  ;
+				}
+				//MCU发送复位指令
+				MCU_IIC_Senddata(0xfe);                 //soft reset
+				//MCU等待接收应答信号
+				if(MCU_IIC_Receiveack())
+				{
+					 //无应答
+					 return  ;
+				}
+				IIC_Stop();                       //stop I2C
+			}
+
+![image](https://github.com/210843013/Watch/blob/master/IIC.png)
+
+
+				    IIC_Start(); 	//Start I2C 
+					MCU_IIC_Senddata(SHT20_WRITEADDR);  // I2C address + write
+					//MCU等待接收应答信号
+					if(MCU_IIC_Receiveack())
+					{
+						 //无应答
+						 return  ;
+					}
+					
+![image](https://github.com/210843013/Watch/blob/master/ml1.png)
+
+					
+					MCU_IIC_Senddata(0xe6);  //写寄存器
+					//MCU等待接收应答信号
+					if(MCU_IIC_Receiveack())
+					{
+						 //无应答
+						 return  ;
+					}
+![image](https://github.com/210843013/Watch/blob/master/set.png)					
+					MCU_IIC_Senddata(0x83);  //设置分辨率  
+					//MCU等待接收应答信号
+					if(MCU_IIC_Receiveack())
+					{
+						 //无应答
+						 return  ;
+					}
+				  IIC_Stop();         //Stop I2C         
+				
+				
+![image](https://github.com/210843013/Watch/blob/master/ml.png)
+
+			MCU_IIC_Senddata(SHT20_WRITEADDR&0xfe);  //I2C address + write
+			//MCU等待接收应答信号
+			if(MCU_IIC_Receiveack())
+			{
+				 //无应答
+				 return  0;
+			}
 			
+			MCU_IIC_Senddata(commod);  //发送测量温度/湿度命令
+			//MCU等待接收应答信号
+			if(MCU_IIC_Receiveack())
+			{
+				 //无应答
+				 return 0 ;
+			}
+			do
+			{
+				IIC_Delay_us(6);         //延时
+				IIC_Start();        //发送开始信号
+				MCU_IIC_Senddata(SHT20_READADDR|0x01);
+			}while(MCU_IIC_Receiveack());  //无应答则整形，还在测量中，如果有应答，则结束当前循环
+
+			
+			
+			MSB = MCU_IIC_Receivedata();    //读Data(MSB)
+			MCU_IIC_Sendack(0);      //给应答ACK
+			
+			LSB = MCU_IIC_Receivedata();  //读Data(LSB)
+			MCU_IIC_Sendack(0);      //给应答ACK
+			
+			MCU_IIC_Receivedata();    //读Checksum ，
+			MCU_IIC_Sendack(1); //不给应答NACK 			
 			
 			
 			
