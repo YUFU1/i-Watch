@@ -17,6 +17,10 @@
 #include "sht20.h"
 #include  "iic.h"
 #include "stdio.h"
+#include "hp_6.h"
+
+
+
 extern const unsigned char F8X16[1520];
 extern const unsigned char F6x8[][6];
 extern const unsigned char F16X24[];

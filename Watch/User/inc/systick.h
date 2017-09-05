@@ -2,10 +2,9 @@
 #define SYSTICK_H
 #include "includes.h"
 
-void  Delay_ms(u16 xms);
-void  Delay_us(u32 xus);
-void delay(int num);
-void  IIC_Delay_us(u32 xus);
-
+ void Delay_Init(u8 SYSCLK);
+ void delay_us(u32 nus);
+ void delay_xms(u16 nms);
+ void delay_ms(u16 nms);
 #endif
 

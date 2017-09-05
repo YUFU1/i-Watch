@@ -21,4 +21,6 @@
 .\objects\oled.o: ..\User\inc\sht20.h
 .\objects\oled.o: ..\User\inc\iic.h
 .\objects\oled.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\oled.o: ..\User\inc\hp_6.h
+.\objects\oled.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\oled.o: ..\User\inc\font.h

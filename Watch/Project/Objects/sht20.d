@@ -21,3 +21,5 @@
 .\objects\sht20.o: ..\User\inc\sht20.h
 .\objects\sht20.o: ..\User\inc\iic.h
 .\objects\sht20.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\sht20.o: ..\User\inc\hp_6.h
+.\objects\sht20.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

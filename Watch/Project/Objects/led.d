@@ -21,3 +21,5 @@
 .\objects\led.o: ..\User\inc\sht20.h
 .\objects\led.o: ..\User\inc\iic.h
 .\objects\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\led.o: ..\User\inc\hp_6.h
+.\objects\led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

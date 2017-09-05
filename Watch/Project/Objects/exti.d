@@ -21,3 +21,5 @@
 .\objects\exti.o: ..\User\inc\sht20.h
 .\objects\exti.o: ..\User\inc\iic.h
 .\objects\exti.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\exti.o: ..\User\inc\hp_6.h
+.\objects\exti.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

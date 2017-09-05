@@ -21,3 +21,5 @@
 .\objects\motor.o: ..\User\inc\sht20.h
 .\objects\motor.o: ..\User\inc\iic.h
 .\objects\motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\motor.o: ..\User\inc\hp_6.h
+.\objects\motor.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

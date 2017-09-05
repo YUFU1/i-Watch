@@ -21,3 +21,5 @@
 .\objects\spi.o: ..\User\inc\sht20.h
 .\objects\spi.o: ..\User\inc\iic.h
 .\objects\spi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\spi.o: ..\User\inc\hp_6.h
+.\objects\spi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

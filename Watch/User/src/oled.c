@@ -56,7 +56,7 @@ void OLED_Init(void)
 u8 OLED_reset(void)
 {
 	OLED_RST_CLR;
-	Delay_ms(25);   //Jahol Fan ：奇怪的问题，延时改长了，就不能兼容HP-6
+	delay_ms(25);   //Jahol Fan ：奇怪的问题，延时改长了，就不能兼容HP-6
 	OLED_RST_SET;
 	return 0;       //返回0，表示复位成功
 }

@@ -469,6 +469,11 @@
               <FileType>1</FileType>
               <FilePath>..\User\src\sht20.c</FilePath>
             </File>
+            <File>
+              <FileName>hp_6.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\src\hp_6.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

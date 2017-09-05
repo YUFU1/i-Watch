@@ -21,4 +21,6 @@
 .\objects\main.o: ..\User\inc\sht20.h
 .\objects\main.o: ..\User\inc\iic.h
 .\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: ..\User\inc\hp_6.h
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\main.o: ..\User\inc\bmp.h

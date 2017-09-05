@@ -13,6 +13,7 @@
 ".\objects\oled.o"
 ".\objects\iic.o"
 ".\objects\sht20.o"
+".\objects\hp_6.o"
 --library_type=microlib
 --feedback ".\Objects\watch.fed" --feedback_image=none
 --strict --scatter ".\Objects\watch.sct"

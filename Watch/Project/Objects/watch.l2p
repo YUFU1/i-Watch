@@ -13,6 +13,7 @@
 ".\objects\oled.o"
 ".\objects\iic.o"
 ".\objects\sht20.o"
+".\objects\hp_6.o"
 --library_type=microlib --strict --scatter ".\Objects\watch.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

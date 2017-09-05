@@ -21,3 +21,5 @@
 .\objects\tim2_ch3_pwm .o: ..\User\inc\sht20.h
 .\objects\tim2_ch3_pwm .o: ..\User\inc\iic.h
 .\objects\tim2_ch3_pwm .o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\tim2_ch3_pwm .o: ..\User\inc\hp_6.h
+.\objects\tim2_ch3_pwm .o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
