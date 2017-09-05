@@ -1,0 +1,22 @@
+--cpu=Cortex-M4 --fpu=SoftVFP
+".\objects\system_stm32f4xx.o"
+".\objects\startup_stm32f40_41xxx.o"
+".\objects\main.o"
+".\objects\led.o"
+".\objects\systick.o"
+".\objects\exti.o"
+".\objects\motor.o"
+".\objects\key.o"
+".\objects\tim3_ch2_pwm.o"
+".\objects\tim2_ch3_pwm .o"
+".\objects\spi.o"
+".\objects\oled.o"
+".\objects\iic.o"
+".\objects\sht20.o"
+".\objects\hp_6.o"
+--library_type=microlib
+--feedback ".\Objects\watch.fed" --feedback_image=none
+--strict --scatter ".\Objects\watch.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\watch.map" -o .\Objects\watch.axf
