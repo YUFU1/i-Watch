@@ -1,74 +1,67 @@
-#include "includes.h"
-#include "bmp.h"
+#include "includes.h" 
+
 /*************************************
           智能手表项目开发
 **************************************/
 /************************************/
+// 初始化为0
 
-int main()
-{
-	//int i;
-  u8 uiBuf[40];
-	u8 pulseBuf[24] = {0};
-  TempHumiValue_t humi_temp_val ; 	//温湿度	
-	Delay_Init(100);
-  SPI_Init();	
-	LED_Init();
-	LED_OFF;
-	SHT20_Init();	
-  OLED_Init();
-	HP_Init();
-	
-	
-	
-	
-	OLED_drawBMP(0,0,128,8,(u8*)BMP_OPEN_PULSE);  //显示“请将传感器放于手腕背部，平心静气，5秒后心率测量打开”
-	delay_ms(5000);
-	HP_OpenRate();   //打开心率测量
-	delay_ms(1000);	
-  OLED_clear();
-	
-//	Motor_Init();
-//  Key_Init();	
-	        
-//  TIM3_CH2_PWM_Init(1000,100); // 100*10^6/1000*100 = 1000
-//	TIM2_CH3_PWM_Init(1000,100);
+static struct SHOW show={0,0};
+static struct KEY key={1,1};
 
+// 置位计算
 
-    //OLED_showChString(0,2,"123ad897",16);
-	  // OLED_drawBMP(0,0,54,7,(u8*)step_bmp);
-	while(1)
-	{		
-//		 for(i=0;i<=100;i++)
-//		 {
-//		    TIM2->CCR3=i;
-//			TIM3->CCR2=i; 
-//		  delay_ms(10);
-//		 }
-//		 for(i=100;i>=0;i--)
-//		   {
-//		    TIM2->CCR3=i;
-//			TIM3->CCR2=i;	 
-//		  delay_ms(10);
-//		 }
-		
-    HP_GetRateResult();
-		HP_GetResultData(pulseBuf);
-		
-		sprintf((char*)uiBuf,"%03d",pulseBuf[7]); // //byte 7是心率结果
-		OLED_showChString(10,6,uiBuf,16); 		
-	  delay_ms(1000);
-		
-//		//获取温湿度
-  humi_temp_val = *SHT20_readTemAndHum();
-  humi_temp_val = *SHT20_readTemAndHum();//获取温度
-  sprintf((char*)uiBuf,"Tem %.2f       RH %.2f",humi_temp_val.temperature,humi_temp_val.humidity); // 以整数显示
-	OLED_showChString(0,0,uiBuf,16); 	 	
-	}            	 
-
+void Camp()
+{ 
+	if(show.aft_flag>5)
+	{
+   show.aft_flag=0;
+   show.pre_flag=0;
+	}	 
+  show.pre_flag=show.aft_flag;
+  show.aft_flag+=key.puls;
 
 }
 
+//按键值
+
+int main()
+{
+ static int pre=1,aft=1;
+	Delay_Init(100);
+  SPI_Init();	
+	LED_Init();
+	SHT20_Init();	
+  OLED_Init(); 
+	MPU_Init();
+	HP_Init();
+	RTC_Init();		 			//初始化RTC
+	RTC_Set_WakeUp(4,0);		//配置WAKE UP中断,1秒钟中断一次
+	Motor_Init();
+  Key_Init();	
+	TIM3_Init(10000-1,5000-1);        
+//  TIM3_CH2_PWM_Init(1000,100); // 100*10^6/1000*100 = 1000
+//	TIM2_CH3_PWM_Init(1000,100);
+
+	while(1)
+	{		
+		if(Key_ON==1)
+	{
+	  	delay_xms(100);
+		  if(Key_ON==1)
+			{
+				Camp();
+//			  aft=show.aft_flag;
+//				pre=show.pre_flag;
+				key.flag++;
+       	
+			}
+		}
+		  SHOWMENU();
+ 
+	}
+
+}
 
 
 
